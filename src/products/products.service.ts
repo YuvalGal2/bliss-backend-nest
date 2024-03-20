@@ -13,7 +13,7 @@ export class ProductsService {
     return await this.cacheService.getItemFromCache(key);
   }
 
-  private async updateCache(key, value): Promise<any> {
+  private async updateCache(key: string, value: Product | any): Promise<any> {
     await this.cacheService.setItemInCache(key, value);
   }
 
